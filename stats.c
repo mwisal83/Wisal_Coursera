@@ -1,4 +1,7 @@
 
+
+
+
 /******************************************************************************
  * Copyright (C) 2017 by Alex Fosdick - University of Colorado
  *
@@ -29,7 +32,7 @@
  */
 
 #include <stdio.h> 
-#include "stats.h"
+//#include "stats.h"
   
 #define SIZE (40)
   
@@ -39,7 +42,7 @@ void print_array (int , unsigned char*);
 unsigned char find_maximum(int , unsigned char*);
 unsigned char find_minimum(int , unsigned char*);
 unsigned char find_median(int , unsigned char*);
-void print_statistics(unsigned char, unsigned char, unsigned char, unsigned char)
+void print_statistics(double, unsigned char, unsigned char, unsigned char);
 double find_mean(int , unsigned char*);
 
   
@@ -158,7 +161,8 @@ int i;
 
 }
 
-void print_statistics(unsigned char mean, unsigned char max, unsigned char min, unsigned char median){
+void print_statistics(double mean, unsigned char max, unsigned char min, unsigned char median){
 
-printf("\n %lf \n %u \n %u \n %u \n", mean, max, min, median);
+printf("\n Mean = %lf \n max= %u \n minimum=%u \n median=%u \n", mean, max, min, median);
 }
+
